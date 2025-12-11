@@ -95,13 +95,13 @@ Node.js Backend	http://localhost:3000
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](./screenshots/login.png)
+![Login Page](./screenshots/Login.png.png)
 
 ### Client List Page
-![Client List](./screenshots/client-list.png)
+![Client List](./screenshots/Client-list.png.png)
 
 ### Meeting Scheduler
-![Meeting Scheduler](./screenshots/meeting-scheduler.png)
+![Meeting Scheduler](./screenshots/Create-Meeting.png.png)
 
 ---
 
