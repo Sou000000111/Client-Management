@@ -98,10 +98,20 @@ Node.js Backend	http://localhost:3000
 ![Login Page](./screenshots/Login.png.png)
 
 ### Client List Page
-![Client List](./screenshots/Client-list.png.png)
+![Client List](./screenshots/Client-List.png.png)
+
+### Add Client Page
+![Add Client](./screenshots/Add-Client.png.png)
+
+### Edit Client Page
+![Edit Client](./screenshots/Edit_Client.png.png)
+
 
 ### Meeting Scheduler
 ![Meeting Scheduler](./screenshots/Create-Meeting.png.png)
+
+### Meeting List
+![Meeting list](./screenshots/Meeting-List.png.png)
 
 ---
 
