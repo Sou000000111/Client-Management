@@ -1,0 +1,52 @@
+<div class="meetings-container">
+  <h2 class="title">Meetings</h2>
+
+  <div *ngIf="loading" class="loading">Loading meetings...</div>
+
+  <div class="table-wrapper" *ngIf="!loading">
+
+    <table *ngIf="meetings.length > 0; else empty" class="meetings-table animate-in">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Topic</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th class="actions-col">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let m of meetings" class="row-anim">
+          <td>{{ m.firstName }} {{ m.lastName }}</td>
+          <td>{{ m.topic }}</td>
+          <td>{{ m.meetingDate | date:'dd-MM-yyyy' }}</td>
+
+          <td>{{ m.meetingTime }}</td>
+
+          <td>
+            <span 
+              class="status-chip"
+              [ngClass]="{
+                'upcoming': getStatus(m) === 'Upcoming',
+                'completed': getStatus(m) === 'Completed'
+              }"
+            >
+              {{ getStatus(m) }}
+            </span>
+          </td>
+
+          <td>
+            <button class="btn-del" (click)="deleteMeeting(m.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #empty>
+      <p class="empty">No meetings found.</p>
+    </ng-template>
+
+  </div>
+</div>

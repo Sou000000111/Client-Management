@@ -1,0 +1,19 @@
+<div class="login-wrapper">
+
+  <div class="login-card" [class.shake]="error">
+
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Login to continue</p>
+
+    <input type="text" placeholder="Username" [(ngModel)]="username" class="input-box">
+
+    <input type="password" placeholder="Password" [(ngModel)]="password" class="input-box">
+
+    <button class="login-btn" (click)="login()">Login</button>
+
+    <p class="error-text" *ngIf="error">Incorrect username or password</p>
+
+  </div>
+
+</div>
+

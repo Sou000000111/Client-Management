@@ -1,0 +1,44 @@
+<div class="page-container">
+  <h1 class="page-title">
+    {{ editId ? 'Edit Client' : 'Add Client' }}
+  </h1>
+
+  <div class="form-card">
+
+    <form [formGroup]="clientForm">
+
+      <div class="form-row">
+        <input class="form-input" placeholder="First Name" formControlName="firstName">
+        <input class="form-input" placeholder="Middle Name" formControlName="middleName">
+        <input class="form-input" placeholder="Last Name" formControlName="lastName">
+      </div>
+
+      <div class="form-row">
+        <input class="form-input" placeholder="Email" formControlName="email">
+
+        <select class="form-input" formControlName="gender">
+          <option value="">-- Select Gender --</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <input type="date" class="form-input" formControlName="dob">
+      </div>
+
+      <div class="form-row">
+        <input class="form-input" placeholder="Address" formControlName="address">
+      </div>
+
+      <!-- ONLY SHOW PASSWORD WHEN CREATING A NEW CLIENT -->
+      <div class="form-row" *ngIf="!editId">
+        <input class="form-input" type="password" placeholder="Password" formControlName="password">
+      </div>
+
+      <button class="update-btn" (click)="updateClient()">
+        {{ editId ? 'Update' : 'Add Client' }}
+      </button>
+
+    </form>
+
+  </div>
+</div>

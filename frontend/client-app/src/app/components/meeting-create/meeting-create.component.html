@@ -1,0 +1,80 @@
+<div class="wrapper">
+
+  <h2 class="title">Schedule Meeting</h2>
+
+  <div class="card animate">
+
+    <form [formGroup]="meetingForm" (ngSubmit)="onSubmit()" novalidate>
+
+      <!-- CLIENT -->
+      <div class="form-group" [class.invalid]="isInvalid('client_id')">
+        <label class="floating">Client</label>
+        <select formControlName="client_id">
+          <option value="">Select Client</option>
+          <option *ngFor="let c of clients" [value]="c.id">
+            {{ c.firstName }} {{ c.lastName }}
+          </option>
+        </select>
+        <span class="icon">👤</span>
+
+        <p class="error" *ngIf="isInvalid('client_id')">Client is required</p>
+      </div>
+
+      <!-- TOPIC -->
+      <div class="form-group" [class.invalid]="isInvalid('topic')">
+        <label class="floating">Meeting Topic</label>
+        <input type="text" formControlName="topic" />
+        <span class="icon">💬</span>
+        <p class="error" *ngIf="isInvalid('topic')">Topic is required</p>
+      </div>
+
+      <!-- DATE + TIME -->
+      <div class="row">
+        <div class="form-group" [class.invalid]="isInvalid('meetingDate')">
+          <label class="floating">Date</label>
+          <input type="date" formControlName="meetingDate" />
+          <span class="icon">📅</span>
+          <p class="error" *ngIf="isInvalid('meetingDate')">Choose a date</p>
+        </div>
+
+        <div class="form-group" [class.invalid]="isInvalid('meetingTime')">
+          <label class="floating">Time</label>
+          <input type="time" formControlName="meetingTime" />
+          <span class="icon">⏰</span>
+          <p class="error" *ngIf="isInvalid('meetingTime')">Choose a time</p>
+        </div>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="form-group">
+        <label class="floating">Location</label>
+        <input type="text" formControlName="location" />
+        <span class="icon">📍</span>
+      </div>
+
+      <!-- NOTES -->
+      <div class="form-group">
+        <label class="floating">Notes</label>
+        <textarea formControlName="notes"></textarea>
+        <span class="icon">📝</span>
+      </div>
+
+      <button class="btn-save" [disabled]="meetingForm.invalid">
+        Save
+      </button>
+
+      <button class="back-btn"  (click)="goBackToLogin()">
+         ← Back to Login
+      </button>
+
+
+    </form>
+
+  </div>
+
+  <!-- SUCCESS POPUP -->
+  <div id="successPopup" class="popup">
+    ✔ Meeting Saved Successfully!
+  </div>
+
+</div>

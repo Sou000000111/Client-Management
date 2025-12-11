@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+/* ------------ NAVBAR ------------- */
+.navbar {
+  background: #1e1e2f;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.nav-left {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+.nav-links li a:hover {
+  background: #4c4cff;
+}
+
+/* ---------- PAGE CONTENT ---------- */
+
+.content {
+  padding: 25px;
+}
+
+/* ------------- CLIENT LIST PAGE ------------- */
+
+.table-container {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:nth-child(1) {
+  background: #4c8bff;
+  color: white;
+}
+
+button:nth-child(2) {
+  background: #ff4c4c;
+  color: white;
+}

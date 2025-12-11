@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+
+  <h1 class="page-title">Clients</h1>
+
+  <button class="add-btn" (click)="addClient()">Add Client</button>
+
+  <div class="table-card">
+    <table class="client-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>DOB</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let c of clients; let i = index">
+          <td data-label="ID">{{ i + 1 }}</td>
+          <td data-label="Name">{{ c.firstName }} {{ c.lastName }}</td>
+          <td data-label="Email">{{ c.email }}</td>
+          <td data-label="Gender">{{ c.gender }}</td>
+          <td data-label="DOB">{{ c.dob }}</td>
+          <td data-label="Address">{{ c.address }}</td>
+
+          <td data-label="Actions">
+            <button class="btn-edit" (click)="editClient(c.id)">Edit</button>
+            <button class="btn-delete" (click)="deleteClient(c.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

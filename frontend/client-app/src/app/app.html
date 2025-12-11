@@ -1,0 +1,14 @@
+<!-- NAVBAR only when logged in -->
+<nav class="navbar" *ngIf="isLoggedIn() && !isLoginPage()">
+  <div class="nav-left">Client Manager</div>
+  <ul class="nav-links">
+    <li><a routerLink="/clients">Clients</a></li>
+    <li><a routerLink="/create-client">Add Client</a></li>
+    <li><a routerLink="/meetings">Meetings</a></li>
+    <li><a routerLink="/create-meeting">Add Meeting</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,203 @@
+/* Wrapper */
+.wrapper {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 10px;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Card */
+.card {
+  background: #ffffffcc;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  animation: fadeUp 0.6s ease;
+}
+
+/* Inputs Group */
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 45px 15px 15px;
+  border: 1px solid #dadce0;
+  border-radius: 14px;
+  background: #f8f9ff;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.form-group textarea {
+  height: 90px;
+}
+
+/* Floating Label */
+.floating {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background: white;
+  padding: 0 6px;
+  font-size: 13px;
+  color: #5a5a5a;
+  border-radius: 5px;
+}
+
+/* Icons */
+.icon {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+/* Invalid State */
+.invalid input,
+.invalid select,
+.invalid textarea {
+  border-color: #ff5757 !important;
+}
+
+.error {
+  font-size: 13px;
+  color: #ff3d3d;
+  margin-top: 3px;
+}
+
+/* Row */
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+@media(max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Save Button */
+.btn-save {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4b7bff, #2a59ff);
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-save:hover {
+  transform: scale(1.05);
+}
+
+.btn-save:disabled {
+  background: #bfc5d5;
+  cursor: not-allowed;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.form-container {
+  max-width: 700px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  background: white;
+}
+
+* {
+  box-sizing: border-box; /* ⭐ UNIVERSAL FIX */
+}
+
+.form-group {
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.input-box,
+.textarea-box,
+.select-box {
+  width: 100%;
+  border-radius: 12px;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  background: #f7f8fc;
+  transition: all 0.2s;
+}
+
+/* Doble-box date/time row fix */
+.row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+.row > div {
+  flex: 1;    /* ⭐ Responsive fit */
+}
+
+
+.back-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  border-radius: 14px;
+  background: #f0f0f5;
+  color: #333;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.back-btn:hover {
+  background: #e5e5ff;
+  transform: translateY(-2px);
+}
+
+.back-btn:active {
+  transform: scale(0.97);
+}
